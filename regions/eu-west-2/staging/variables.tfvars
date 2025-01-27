@@ -1,5 +1,5 @@
-aws_region  = "eu-west-2"
-aws_profile = "staging"
+region      = "eu-west-2"
+profile     = "staging"
 environment = "staging"
 
 instance_type = "t3.micro"
