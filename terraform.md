@@ -19,15 +19,29 @@ terraform --version
 ```
 3. Test your AWS connection with Terraform
 ```
-terraform plan
+bash ./terraform.sh eu-west-2 staging plan
 ```
 
-## Terraform Commands
+## How to use the terraform.sh script
+The script is simple and is just a shorthand for selecting a workspace and then running the appropriate terraform command for that workspace. This makes it so the different regions and environments don't get stored into the same state file. Terraform workspaces allow us to manage multiple environments, and multiple regions, without them interfering with each other.
 
-- `terraform init` - Initialize a new or existing Terraform project
-- `terraform plan` - Generate and show an execution plan
-- `terraform apply` - Apply a Terraform plan
-- `terraform destroy` - Destroy Terraform-managed infrastructure
+```
+bash ./terraform.sh <region> <environment> <terraform-command>
+```
+
+Example:
+```
+bash ./terraform.sh eu-west-2 staging plan
+```
+
+This will run the `plan` command for the `eu-west-2` region and `staging` environment. 
+
+## Available Terraform Commands
+
+- `plan` - Generate and show an execution plan
+- `apply` - Apply a Terraform plan
+- `destroy` - Destroy Terraform-managed infrastructure
+
 
 ## Notes
 

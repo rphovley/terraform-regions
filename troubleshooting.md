@@ -3,7 +3,7 @@
 ### Failed to get shared config profile
 When I run the command
 ```
-terraform init -backend-config=regions/eu-west-2/staging-state.tfvars
+bash ./terraform.sh eu-west-2 staging plan
 ```
 
 I get the error:
@@ -27,7 +27,7 @@ AWS_PROFILE=staging aws configure
 
 When I run the command
 ```
-terraform init -backend-config=regions/eu-west-2/staging-state.tfvars
+bash ./terraform.sh eu-west-2 staging plan
 ```
 
 I get the error:
@@ -48,7 +48,7 @@ Initializing the backend...
 
 This is because the S3 bucket does not exist.
 
-To fix this, create the bucket for the region and environmentin the AWS console or using the AWS CLI. 
+To fix this, create the bucket for the region and environment in the AWS console or using the AWS CLI. 
 
 ```
 AWS_PROFILE=staging aws s3api create-bucket \                                                   

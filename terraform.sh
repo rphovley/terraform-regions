@@ -14,7 +14,7 @@ WORKSPACE="${REGION}-${ENV}"
 terraform workspace select $WORKSPACE 2>/dev/null || terraform workspace new $WORKSPACE
 
 # Initialize with correct backend config
-terraform init -backend-config="regions/${REGION}/terraform-state.tfvars"
+terraform init -backend-config="regions/${REGION}/${ENV}/terraform-state.tfvars"
 
 # Run terraform command with appropriate var file
-terraform $TF_COMMAND -var-file="environments/${ENV}/variables.tfvars"
+terraform $TF_COMMAND -var-file="regions/${REGION}/${ENV}/variables.tfvars"
