@@ -5,7 +5,6 @@
 1. [Install Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) 
 2. [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-
 ## Getting Started
 
 1. Sign into AWS with CLI
@@ -21,6 +20,11 @@ terraform --version
 ```
 bash ./terraform.sh eu-west-2 staging plan
 ```
+
+## Configuring your project
+Add any of your own .tf files to the root directory. An example networking.tf file is provided to show where you can place them. You can use terraform conventions to organize your infrastructure definitions from there. 
+
+Any additional regions or environments can be added by creating a new bucket in S3, and then adding a new folder in the regions directory with the region name and a new folder with the environment name. An example is provided in `regions/eu-west-2/staging`.
 
 ## How to use the terraform.sh script
 The script is simple and is just a shorthand for selecting a workspace and then running the appropriate terraform command for that workspace. This makes it so the different regions and environments don't get stored into the same state file. Terraform workspaces allow us to manage multiple environments, and multiple regions, without them interfering with each other.
