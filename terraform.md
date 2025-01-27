@@ -21,9 +21,10 @@ terraform --version
 bash ./terraform.sh eu-west-2 staging plan
 ```
 
-## Configuring your project
-Add any of your own .tf files to the root directory. An example networking.tf file is provided to show where you can place them. You can use terraform conventions to organize your infrastructure definitions from there. 
+## Adding infrastructure definitions
+Infrastructure definitions are located in the root of the project. Any .tf files in the root directory will be used to create the infrastructure in your region and environment. Ideally, split these defintions into separate files for the purpose of the infrastructure like networking.tf
 
+## Adding a new region or environment
 Any additional regions or environments can be added by creating a new bucket in S3, and then adding a new folder in the regions directory with the region name and a new folder with the environment name. An example is provided in `regions/eu-west-2/staging`.
 
 ## How to use the terraform.sh script
