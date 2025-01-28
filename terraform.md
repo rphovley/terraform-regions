@@ -18,7 +18,7 @@ terraform --version
 ```
 3. Test your AWS connection with Terraform
 ```
-bash ./terraform.sh eu-west-2 staging plan
+bash ./terraform.sh eu-west-2 staging init
 ```
 
 ## Adding infrastructure definitions
