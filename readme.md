@@ -1,5 +1,5 @@
 # Terraform Regions
-This project is a simple example of how to manage multiple regions and environments using Terraform and AWS S3 for state management. The goal was to be able to define infrastructure on time that would be able to be used in multiple regions and environments. Any .tf files in the root directory will be used to create the infrastructure in your region and environment.
+This project is a simple example of how to manage multiple regions and environments using Terraform and AWS S3 for state management. The goal was to be able to define infrastructure one time that would be able to be used in multiple regions and environments. Any .tf files in the root directory will be used to create the infrastructure in your region and environment.
 
 ## Instructions
 Includes instructions for the terraform.sh script and how to use it.
